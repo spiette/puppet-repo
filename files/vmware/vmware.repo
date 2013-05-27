@@ -1,0 +1,6 @@
+[vmware-tools]
+name=VMware Tools
+baseurl=http://packages.vmware.com/tools/esx/4.1latest/rhel6/i686
+enabled=1
+gpgcheck=1
+gpgkey=http://packages.vmware.com/tools/keys/VMWARE-PACKAGING-GPG-RSA-KEY
