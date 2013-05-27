@@ -1,5 +1,7 @@
 # repo
 
+[![Build Status](https://secure.travis-ci.org/spiette/puppet-repo.png?branch=master)](http://travis-ci.org/spiette/puppet-repo)
+
 This is the repo module for yum repositories. Copy the repo and key files
 under a module files directory, eg.:
 
