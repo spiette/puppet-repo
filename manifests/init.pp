@@ -35,7 +35,7 @@
 # Copyright 2013 Simon Piette
 #
 define repo (
-  $module = $module_name,
+  $module = 'repo',
   $source = "puppet:///modules/${module}/${name}/${name}.repo",
   $keyname = $name,
   ) {
