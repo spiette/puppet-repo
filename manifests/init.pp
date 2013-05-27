@@ -35,16 +35,19 @@
 # Copyright 2013 Simon Piette
 #
 define repo (
-  $module = 'repo',
-  $source = "puppet:///modules/${module}/${name}/${name}.repo",
+  $module = $module_name,
+  $source = undef,
   $keyname = $name,
   ) {
+  if ! $source {
+    $reposource = "puppet:///modules/${module}/${name}/${name}.repo"
+  }
   file { "/etc/yum.repos.d/${name}.repo":
     ensure => present,
     owner  => 'root',
     group  => 'root',
     mode   => '0664',
-    source => $source,
+    source => $reposource,
   }
   file { "/etc/pki/rpm-gpg/RPM-GPG-KEY-${keyname}":
     ensure => present,
